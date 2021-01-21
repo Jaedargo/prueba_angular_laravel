@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Article;
 
-Route::get('/usuarios', 'App\Http\Controllers\UserController@index');
+Route::get('/consulta', 'App\Http\Controllers\UserController@index');
 
 Route::get('articles', function() {
     // If the Content-Type and Accept headers are set to 'application/json',
