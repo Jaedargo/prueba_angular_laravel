@@ -5,24 +5,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 
 // Forms module
 import { FormsModule } from '@angular/forms';
 
 // Components
-import { componentCreateComponent } from './component-create/component-create.component';
-import { componentEditComponent } from './component-edit/component-edit.component';
-import { componentListComponent } from './component-list/component-list.component';
+
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+import { RedComponent } from './components/red/red.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TarjetaComponent,
+    RedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    GoogleMapsModule,
     BrowserAnimationsModule
   ],
   providers: [],

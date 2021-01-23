@@ -1,0 +1,41 @@
+
+
+<table>
+    <tr *ngFor="let item of lista">
+      <td>
+              {{item}}
+    </td>
+      </tr>
+  </table>
+
+  
+<mat-card>
+  <mat-card-title>{{item.permit_type}}</mat-card-title>
+  <mat-card-content>
+    <p>
+      {{item.work_description}}    
+    </p>
+    <p>
+      {{item.latitude}}     
+    </p>
+    <p>
+      {{item.longitude}}      
+   </p>
+   
+   
+ 
+   <google-map height="500px"      width="500px"           [center]="posicion">
+
+
+    <map-marker [position]="posicion"></map-marker>
+
+
+    </google-map>
+
+
+
+  </mat-card-content>
+</mat-card>
+
+
+  

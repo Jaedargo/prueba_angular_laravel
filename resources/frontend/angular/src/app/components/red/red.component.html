@@ -1,0 +1,34 @@
+
+<table>
+      
+    <tr *ngFor="let item of totalAngularPackages.slice(0, 10);">
+      <td>
+                
+        <mat-card>
+            <mat-card-title>{{item.permit_type}}</mat-card-title>
+            <mat-card-content>
+            <p>
+                {{item.work_description}}    
+            </p>
+            <p>
+                {{item.location.coordinates[0]}}         
+                {{item.location.coordinates[1]}}                      
+            </p>
+
+
+            <google-map height="500px"      width="500px"           [center]="{lat: item.location.coordinates[1], lng: item.location.coordinates[0]}">
+
+
+                <map-marker [position]="{lat: item.location.coordinates[1], lng: item.location.coordinates[0]}"></map-marker>
+            
+            
+                </google-map>
+
+
+            </mat-card-content>
+        </mat-card>
+
+    </td>
+      </tr>
+
+  </table>
